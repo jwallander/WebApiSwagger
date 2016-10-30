@@ -7,13 +7,13 @@ namespace WebApiSwagger.Swagger
 {
     public class SwaggerResponseExamplesAttribute : Attribute
     {
-        public SwaggerResponseExamplesAttribute(Type responseType, Type examplesType)
+        public SwaggerResponseExamplesAttribute(Type responseType, Type examplesProviderType)
         {
             ResponseType = responseType;
-            ExamplesType = examplesType;
+            ExamplesProviderType = examplesProviderType;
         }
 
         public Type ResponseType { get; set; }
-        public Type ExamplesType { get; set; }
+        public Type ExamplesProviderType { get; set; }
     }
 }

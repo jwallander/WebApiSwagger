@@ -72,6 +72,7 @@ namespace WebApiSwagger.Controllers
         /// <response code="500">Internal Server Error</response>
         [Route("")]
         [ResponseType(typeof(Student))]
+        [SwaggerRequestExamples(typeof(Student), typeof(StudentExample))]
         public IHttpActionResult Post(Student student)
         {
             if (!ModelState.IsValid)

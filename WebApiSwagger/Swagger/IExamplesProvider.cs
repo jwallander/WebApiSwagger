@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebApiSwagger.Swagger
 {
-    public interface IProvideExamples
+    public interface IExamplesProvider
     {
         object GetExamples();
     }

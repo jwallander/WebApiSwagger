@@ -4,7 +4,7 @@ using WebApiSwagger.Models;
 
 namespace WebApiSwagger.Swagger.Examples
 {
-    public class StudentsExample : IExamplesProvider
+    public class StudentExample : IExamplesProvider
     {
         public object GetExamples()
         {
@@ -26,7 +26,7 @@ namespace WebApiSwagger.Swagger.Examples
                 studentsList.Add(student);
             }
 
-            return studentsList;
+            return studentsList[0];
         }
         static string[] studentNames =
         {

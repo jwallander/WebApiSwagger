@@ -121,8 +121,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Swagger\ExamplesOperationFilter.cs" />
+    <Compile Include="Swagger\Examples\StudentExample.cs" />
     <Compile Include="Swagger\Examples\StudentsExample.cs" />
-    <Compile Include="Swagger\IProvideExamples.cs" />
+    <Compile Include="Swagger\IExamplesProvider.cs" />
+    <Compile Include="Swagger\SwaggerRequestExamplesAttribute.cs" />
     <Compile Include="Swagger\SwaggerResponseExamplesAttribute.cs" />
   </ItemGroup>
   <ItemGroup />

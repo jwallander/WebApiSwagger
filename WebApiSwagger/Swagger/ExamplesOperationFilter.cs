@@ -4,7 +4,6 @@ using Swashbuckle.Swagger;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Http.Description;
 
 namespace WebApiSwagger.Swagger
@@ -76,11 +75,11 @@ namespace WebApiSwagger.Swagger
         private static object FormatAsJson(IExamplesProvider provider)
         {
             var examples = new Dictionary<string, object>
-    {
-        {
-            "application/json", provider.GetExamples()
-        }
-    };
+            {
+                {
+                    "application/json", provider.GetExamples()
+                }
+            };
 
             return ConvertToCamelCase(examples);
         }

@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiSwagger", "WebApiSwagger\WebApiSwagger.csproj", "{AC28FE5F-B718-4908-9A88-92729375ABA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleClientNSwag", "ConsoleClientNSwag\ConsoleClientNSwag.csproj", "{97E122BF-1445-4DED-B9EE-B87F98061471}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{AC28FE5F-B718-4908-9A88-92729375ABA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC28FE5F-B718-4908-9A88-92729375ABA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC28FE5F-B718-4908-9A88-92729375ABA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97E122BF-1445-4DED-B9EE-B87F98061471}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97E122BF-1445-4DED-B9EE-B87F98061471}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97E122BF-1445-4DED-B9EE-B87F98061471}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97E122BF-1445-4DED-B9EE-B87F98061471}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

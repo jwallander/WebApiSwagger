@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.Http;
 using Swashbuckle.Application;
 using WebApiSwagger.App_Start;
+using WebApiSwagger.Swagger;
 
 [assembly: OwinStartup(typeof(WebApiSwagger.Startup))]
 namespace WebApiSwagger
@@ -22,9 +23,10 @@ namespace WebApiSwagger
 
             config.EnableSwagger(c =>
             {
-                c.SingleApiVersion("v1", "WebAPI");
+                c.SingleApiVersion("v1", "WebApiSwagger");
                 c.IncludeXmlComments(GetXmlCommentsPath());
                 c.ResolveConflictingActions(x => x.First());
+                c.OperationFilter<ExamplesOperationFilter>();
             }).EnableSwaggerUi();
 
             app.UseWebApi(config);

@@ -5,7 +5,10 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
+using Swashbuckle.Swagger.Annotations;
 using WebApiSwagger.Models;
+using WebApiSwagger.Swagger;
+using WebApiSwagger.Swagger.Examples;
 
 namespace WebApiSwagger.Controllers
 {
@@ -28,9 +31,11 @@ namespace WebApiSwagger.Controllers
         /// Get all students
         /// </summary>
         /// <remarks>Get an array of all students</remarks>
-        /// <response code="500">Internal Server Error</response>
         [Route("")]
         [ResponseType(typeof(List<Student>))]
+        [SwaggerResponse(HttpStatusCode.OK, Type = typeof(IEnumerable<Student>))]
+        [SwaggerResponseExamples(typeof(IEnumerable<Student>), typeof(StudentsExample))]
+        [SwaggerResponse(HttpStatusCode.InternalServerError, "Internal Server Error")]
         public IHttpActionResult Get()
         {
             return Ok(StudentsList);

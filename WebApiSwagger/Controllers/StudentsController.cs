@@ -45,9 +45,10 @@ namespace WebApiSwagger.Controllers
         /// <param name="userName">Unique username</param>
         /// <remarks>Get signle student by providing username</remarks>
         /// <response code="404">Not found</response>
-        /// <response code="500">Internal Server Error</response>
         [Route("{userName:alpha}", Name = "GetStudentByUserName")]
         [ResponseType(typeof(Student))]
+        [SwaggerResponse(HttpStatusCode.OK, "Ok", typeof(Student))]
+        [SwaggerResponseExamples(typeof(Student), typeof(StudentExample))]
         public IHttpActionResult Get(string userName)
         {
 
@@ -67,10 +68,11 @@ namespace WebApiSwagger.Controllers
         /// <param name="student">Student Model</param>
         /// <remarks>Insert new student</remarks>
         /// <response code="400">Bad request</response>
-        /// <response code="500">Internal Server Error</response>
         [Route("")]
         [ResponseType(typeof(Student))]
+        [SwaggerResponse(HttpStatusCode.Created, "Created", typeof(Student))]
         [SwaggerRequestExamples(typeof(Student), typeof(StudentExample))]
+        [SwaggerResponseExamples(typeof(Student), typeof(StudentExample))]
         public IHttpActionResult Post(Student student)
         {
             if (!ModelState.IsValid)
@@ -96,7 +98,7 @@ namespace WebApiSwagger.Controllers
         /// <param name="userName">Unique username</param>
         /// <remarks>Delete existing student</remarks>
         /// <response code="404">Not found</response>
-        /// <response code="500">Internal Server Error</response>
+        /// <response code="204">No content</response>
         [Route("{userName:alpha}")]
         public HttpResponseMessage Delete(string userName)
         {

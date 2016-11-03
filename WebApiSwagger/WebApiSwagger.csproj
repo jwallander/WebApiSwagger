@@ -117,13 +117,13 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
-    <Compile Include="Data\Students.cs" />
+    <Compile Include="Models\Students.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Swagger\ExamplesOperationFilter.cs" />
-    <Compile Include="Swagger\Examples\StudentExample.cs" />
-    <Compile Include="Swagger\Examples\StudentsExample.cs" />
+    <Compile Include="Models\StudentExample.cs" />
+    <Compile Include="Models\StudentsExample.cs" />
     <Compile Include="Swagger\SwaggerRequestExamplesAttribute.cs" />
     <Compile Include="Swagger\SwaggerResponseExamplesAttribute.cs" />
   </ItemGroup>

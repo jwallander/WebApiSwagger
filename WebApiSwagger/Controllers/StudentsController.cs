@@ -7,7 +7,6 @@ using System.Web.Http.Description;
 using Swashbuckle.Swagger.Annotations;
 using WebApiSwagger.Models;
 using WebApiSwagger.Swagger;
-using WebApiSwagger.Swagger.Examples;
 
 namespace WebApiSwagger.Controllers
 {

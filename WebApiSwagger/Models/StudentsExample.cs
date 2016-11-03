@@ -1,9 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using WebApiSwagger.Controllers;
-using WebApiSwagger.Models;
 
-namespace WebApiSwagger.Swagger.Examples
+namespace WebApiSwagger.Models
 {
     public class StudentsExample : List<Student>
     {

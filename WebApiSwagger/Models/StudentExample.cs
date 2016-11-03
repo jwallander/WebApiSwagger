@@ -1,7 +1,4 @@
-﻿using WebApiSwagger.Controllers;
-using WebApiSwagger.Models;
-
-namespace WebApiSwagger.Swagger.Examples
+﻿namespace WebApiSwagger.Models
 {
     public class StudentExample : Student
     {

@@ -1,13 +1,15 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using WebApiSwagger.Controllers;
+using WebApiSwagger.Models;
 
 namespace WebApiSwagger.Swagger.Examples
 {
-    public class StudentsExample : IExamplesProvider
+    public class StudentsExample : List<Student>
     {
-        public object GetExamples()
+        public StudentsExample()
         {
-            return Students.CreateStudents().Take(2);
+            this.AddRange(Students.CreateStudents().Take(2));
         }
     }
 }

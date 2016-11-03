@@ -28,7 +28,7 @@ namespace WebApiSwagger.Swagger
 
                 if (request != null)
                 {
-                    var provider = (IExamplesProvider)Activator.CreateInstance(attr.ExamplesProviderType);
+                    var provider = Activator.CreateInstance(attr.ExamplesProviderType);
 
                     var parts = schema.@ref.Split('/');
                     var name = parts.Last();
@@ -59,7 +59,7 @@ namespace WebApiSwagger.Swagger
                 {
                     if (response.Value != null)
                     {
-                        var provider = (IExamplesProvider)Activator.CreateInstance(attr.ExamplesProviderType);
+                        var provider = Activator.CreateInstance(attr.ExamplesProviderType);
                         response.Value.examples = FormatAsJson(provider);
                     }
                 }
@@ -72,12 +72,12 @@ namespace WebApiSwagger.Swagger
             return JsonConvert.DeserializeObject(jsonString);
         }
 
-        private static object FormatAsJson(IExamplesProvider provider)
+        private static object FormatAsJson(object provider)
         {
             var examples = new Dictionary<string, object>
             {
                 {
-                    "application/json", provider.GetExamples()
+                    "application/json", provider
                 }
             };
 
